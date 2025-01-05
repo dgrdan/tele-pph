@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> PrimaPharme Telepharmacy</title>
+  <link rel="stylesheet" href="konzultacija-pac.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  </script>
+  
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="bg logo">
+      <a href="enter.html"><img src="pphlogo.png"></a>
+    </div>
+    <div class="bg nav">
+      <div class="navbar">
+        <ul>
+        <li><a href="pacijent.html">Naslovna</a></li>
+        <li><a href="#">Konzultacija</a></li>
+        <li><a href="dokumenti.html">Dokumenti</a></li>
+        <li> <a href="materijali.html">Materijali</a> </li>
+        <li><a href="#">Evidencije</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg profil">
+      <img src="profil_icon.png">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Ivka Rodek</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Profil</a>
+          <a href="#">Postavke</a>
+          <a href="#">Statistika</a>
+        </div>
+      </div>
+    </div>
+    <div class="bg inbox">
+      <div class="mailbox">
+        
+
+        <button class="collapsible"><i class="fa fa-fw fa-envelope" style="padding-right: 10px;"></i>MAILBOX</button>
+<div class="collapsible-content">
+  <button class="pacijenti-left">PACIJENTI</button>
+  <button class="pacijenti-left">LIJEČNICI</button>
+  <button class="pacijenti-left" style="border-bottom: 1px solid black;">FARMACEUTI</button>
+</div>
+        <button class="collapsible"><i class="fa fa-calendar" style="padding-right: 10px;"></i> RASPORED</button>
+<div class="collapsible-content">
+  
+</div>
+<button class="collapsible"><i class="fa fa-address-card-o" style="padding-right: 10px;"></i>PACIJENTI</button>
+<div class="collapsible-content">
+  
+</div>
+
+<button class="collapsible"><i class="fa fa-address-card-o" style="padding-right: 10px;"></i>OBAVIJESTI</button>
+<div class="collapsible-content">
+  <p style="text-align: center;">Nema novih obavijesti</p>
+</div>
+
+<div class="konzultacije">
+
+  <button class="collapsible"><i class="fa fa-fw fa-envelope" style="padding-right: 10px;"></i>DATOTEKE</button>
+<div class="collapsible-content">
+<p style="text-align: center;">Dodaj novo:</p>
+<form action="/action_page.php">
+<label for="myfile">Odaberi datoteku:</label>
+<input type="file" id="myfile" name="myfile" multiple><br><br>
+<input type="submit">
+</form>
+</div>
+  
+
+</div>
+
+      </div>
+      
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
+
+    <div class="bg main">
+
+      <div class="main-upper-container">
+        <div class="main-upper-container-left">
+          <div class="main-upper-container-left-up">
+            <i class="fa fa-headphones" style="color:#0800A3;padding-right: 25px;"></i>U tijeku konzultacija s:
+          </div>
+          <div class="main-upper-container-left-ime">
+            IVKA RODEK
+          </div>
+        </div>
+        <div class="main-upper-container-right">
+          <div class="main-upper-container-right-oib">
+            <p>OIB</p>
+            <p style="color: #0800A3; font-weight: bold;">347934394</p>
+          </div>
+          <div class="main-upper-container-right-datum">
+            <p>DOB</p>
+            <p style="color: #0800A3; font-weight: bold;">02.12.1942.</p>
+          </div>
+          <div class="main-upper-container-right-spol">
+            <p>SPOL</p>
+            <p style="color: #0800A3; font-weight: bold;">Ž</p>
+          </div>
+          <div class="main-upper-container-right-posljednje">
+            <p>POSLJEDNJA KONZ.</p>
+            <p style="color: #0800A3; font-weight: bold;">04.04.2024.</p>
+          </div>
+          <button>VIDI PROFIL</button>
+        </div>
+
+        
+      </div>
+
+      <div class="konzultacija-video-container">
+          <img src="images/video-bg.jpg">
+          <div class="konzultacija-video-container-mali">
+            <img src="images/video-mali-bg.jpg">
+          </div>
+          <div class="konzultacija-video-container-mali-ispod">
+            <img src="images/sound-icon.png">
+            <img src="images/chat-icon.png">
+            <img src="images/end-call-icon.png" style="padding-left: 50px;">
+          </div>
+      </div>
+<!--pocetak chat-->
+<br>
+  <!-- msg-header section starts -->
+  <div class="msg-header">
+    <div class="container1">
+      
+      <div>
+        <p style="padding-left: 10px;padding-top: 5px;"><b>IVKA RODEK</b></p>
+      </div>
+    </div>
+  </div>
+  <!-- msg-header section ends -->
+
+  <!-- Chat inbox  -->
+  <div class="chat-page">
+    <div class="msg-inbox">
+      <div class="chats">
+        <!-- Message container -->
+        <div class="msg-page">
+          <!-- Incoming messages -->
+
+          <div class="received-chats">
+            <div class="received-chats-img">
+              
+            </div>
+            <div class="received-msg">
+              <div class="received-msg-inbox">
+                <p>
+                  Pozdrav. Ja sam kćer pacijentice te ću joj pomagati oko služenja tehnologijom u ovoj konzultaciji.
+                </p>
+                <span class="time">10:01h | 15. siječanj</span>
+              </div>
+            </div>
+          </div>
+          <!-- Outgoing messages -->
+          <div class="outgoing-chats">
+            <div class="outgoing-chats-img">
+              
+            </div>
+            <div class="outgoing-msg">
+              <div class="outgoing-chats-msg">
+                <p class="multi-msg">
+                  Pozdrav. Većinu konzultacije ćemo provesti preko video poziva kako bi nas i gospođa Rodek čula te bila u mogućnosti pitati oko nedoumica.
+            
+                </p>
+                <p class="multi-msg">
+                  Javit ćemo Vam ako će neke informacije trebati napisati u chat.<br>Možemo li početi?
+                </p>
+
+                <span class="time">10:01h | 15. siječanj</span>
+              </div>
+            </div>
+          </div>
+          <div class="received-chats">
+            <div class="received-chats-img">
+              
+            </div>
+            <div class="received-msg">
+              <div class="received-msg-inbox">
+                <p class="single-msg">
+                  Hvala, možemo.
+                </p>
+                <span class="time">10:02h | 15. siječanj</span>
+              </div>
+            </div>
+          </div>
+          <div class="outgoing-chats">
+            <div class="outgoing-chats-img">
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- msg-bottom section -->
+
+      <div class="msg-bottom">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Napišite poruku..."
+          />
+
+          <span class="input-group-text send-icon">
+            <i class="bi bi-send"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--kraj chat-->
+
+    </div>
+    
+</body>
+
+</html>

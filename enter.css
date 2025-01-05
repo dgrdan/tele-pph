@@ -1,0 +1,78 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.logo{
+    height: 80%;
+    
+}
+
+.naslov{
+    padding-top: 100px;
+    font-size: 3em;
+    color:#08008A;
+}
+
+.opcije{
+    padding-top: 100px;
+    
+}
+
+.farmaceut{
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 32px;
+    border: none;
+    cursor: pointer;
+   
+}
+
+.pacijent{
+    margin-right: 50px;
+    
+    background-color: #3498DB;
+    color: white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-size: 32px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+  
+  /* Dropdown button on hover & focus */
+  .farmaceut:hover, .farmaceut:focus {
+    background-color: #2980B9;
+  }
+
+  .pacijent:hover, .pacijent:focus {
+    background-color: #2980B9;
+  }
+
+  a:link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color:white
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }

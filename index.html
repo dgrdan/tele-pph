@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> PrimaPharme Telepharmacy</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  </script>
+  
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="bg logo">
+      <a href="enter.html"><img src="pphlogo.png"></a>
+    </div>
+    <div class="bg nav">
+      <div class="navbar">
+        <ul>
+        <li><a href="#">Naslovna</a></li>
+        <li><a href="konzultacija.html">Konzultacija</a></li>
+        <li><a href="#">Dokumenti</a></li>
+        <li><a href="#">Materijali</a></li>
+        <li><a href="#">Evidencije</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg profil">
+      <img src="profil_icon.png">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Damjan Grđan</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Profil</a>
+          <a href="#">Postavke</a>
+          <a href="#">Statistika</a>
+        </div>
+      </div>
+    </div>
+    <div class="bg inbox">
+      <div class="mailbox">
+        
+
+        <button class="collapsible"><i class="fa fa-fw fa-envelope" style="padding-right: 10px;"></i>MAILBOX</button>
+<div class="collapsible-content">
+  <button class="pacijenti-left">PACIJENTI</button>
+  <button class="pacijenti-left">LIJEČNICI</button>
+  <button class="pacijenti-left" style="border-bottom: 1px solid black;">FARMACEUTI</button>
+</div>
+        <button class="collapsible"><i class="fa fa-calendar" style="padding-right: 10px;"></i> RASPORED</button>
+<div class="collapsible-content">
+  
+</div>
+<button class="collapsible"><i class="fa fa-address-card-o" style="padding-right: 10px;"></i>PACIJENTI</button>
+<div class="collapsible-content">
+  
+</div>
+
+<button class="collapsible"><i class="fa fa-address-card-o" style="padding-right: 10px;"></i>OBAVIJESTI</button>
+<div class="collapsible-content">
+  <p style="text-align: center;">Nema novih obavijesti</p>
+</div>
+
+      </div>
+      <div class="konzultacije">
+
+        <button class="collapsible"><i class="fa fa-fw fa-envelope" style="padding-right: 10px;"></i>NOVOSTI</button>
+<div class="collapsible-content">
+  <p style="text-align: center;">Nema novih obavijesti</p>
+</div>
+        <button class="collapsible"><i class="fa fa-calendar" style="padding-right: 10px;"></i> UPUTE</button>
+<div class="collapsible-content">
+  
+</div>
+<button class="collapsible"><i class="fa fa-address-card-o" style="padding-right: 10px;"></i>KORISNI LINKOVI</button>
+<div class="collapsible-content">
+  <p style="text-align: center;">CEZIH</p>
+  <p style="text-align: center;">INFORMATIČARI</p>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
+
+    <div class="bg main">
+      <div class="main-container">
+        <div class="main-container-naslov">TELEFARMACIJA - PORTAL ZA LJEKARNIKE</div> 
+        <div class="main-container-content">
+          <h4>Dobrodošli na portal za ljekarnike ljekarni PrimaPharme </h4>
+           Danas imate 3 konzultacije
+          <br> Imate 4 nove poruke
+        </div>
+      </div>
+    </div>
+    <div class="bg raspored">
+      <div class="consult_bg">
+        <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width slides/quotes -->
+  
+  <div class="mySlides">
+    <div class="dot-container">
+      <i class="fa fa-calendar"></i> 18.12.2024.
+    </div>
+    Otpust iz bolnice. <br>Uvođenje novih lijekova u terapiju. <br> Kardiovaskularni sustav.
+    
+    <div class="raspored-container">
+    <div class="raspored-left">
+    <p class="author">Pacijent: <span>Marko Marković</span><br>
+    Vrijeme: <span>11:00</span></p>
+    </div>
+    <div class="raspored-right"><a href="#"><button class="button2">Više</button></a></div>
+    </div>
+
+    <br><hr><br>
+
+    Kontrolna konzultacija. <br> Kardiovaskularni sustav.
+    <div class="raspored-container">
+    <div class="raspored-left">
+    <p class="author">Pacijent: <span>Ivo Ivić</span><br>
+    Vrijeme: <span>11:45</span></p>
+    </div>
+    <div class="raspored-right"><a href="#"><button class="button2">Više</button></a></div>
+    </div>
+
+    <br><hr><br>
+
+   Pokazna konzultacija. <br>Primjena inhalera. <br> Dišni sustav.
+   <div class="raspored-container">
+    <div class="raspored-left">
+    <p class="author">Pacijent: <span>Ana Anić</span><br>
+    Vrijeme: <span>13:00</span></p>
+    </div>
+    <div class="raspored-right"><a href="#"><button class="button2">Više</button></a></div>
+    </div>
+    
+  </div>
+
+  <div class="mySlides">
+    <div class="dot-container">
+      <i class="fa fa-calendar"></i> 19.12.2024.
+    </div>
+    Otpust iz bolnice. <br>Uvođenje novih lijekova u terapiju. <br> Kardiovaskularni sustav.
+    <p class="author">Pacijent: <span>>Slavko Slavić</span><br>
+    Vrijeme: <span>11:00</span></p>
+    <br><br>
+    Pedijatrija <br> Dišni sustav
+    <p class="author">Pacijent: <span>Maja Majić</span><br>
+    Vrijeme: <span>11:45</span></p>
+    <br><br>
+   Pokazna konzultacija. <br>Sigurnost PDE-5 <br> Kardiovaskularni sustav
+    <p class="author">Pacijent: <span>Karlo Karlović</span><br>
+    Vrijeme: <span>13:00</span></p>
+  </div>
+
+  <div class="mySlides">
+    <div class="dot-container">
+      <i class="fa fa-calendar"></i> 20.12.2024.
+    </div>
+    Otpust iz bolnice. <br>Uvođenje novih lijekova u terapiju. <br> Kardiovaskularni sustav.
+    <p class="author">Pacijent: <span>Chuck Norris</span><br>
+    Vrijeme: <span>11:00</span></p>
+    <br><br>
+    Kontrolna konzultacija. <br> Kardiovaskularni sustav.
+    <p class="author">Pacijent: <span>Tinky Winky</span><br>
+    Vrijeme: <span>11:45</span></p>
+    <br><br>
+   Pokazna konzultacija. <br>Primjena inhalera. <br> Dišni sustav.
+    <p class="author">Pacijent: <span>Casper</span><br>
+    Vrijeme: <span>13:00</span></p>
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+
+
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="footer">
+    &#169;  Martina, Jasmina, Damjan
+  </div>
+</body>
+
+</html>

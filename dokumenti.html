@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> PrimaPharme Telepharmacy</title>
+  <link rel="stylesheet" href="dokumenti.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  </script>
+  
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="bg logo">
+      <a href="enter.html"><img src="pphlogo.png"></a>
+    </div>
+    <div class="bg nav">
+      <div class="navbar">
+        <ul>
+        <li><a href="pacijent.html">Naslovna</a></li>
+        <li><a href="konzultacija-pac.html">Konzultacija</a></li>
+        <li><a href="#">Dokumenti</a></li>
+        <li> <a href="materijali.html">Materijali</a> </li>
+        <li><a href="#">Evidencije</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg profil">
+      <img src="profil_icon.png">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Ivka Rodek</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Profil</a>
+          <a href="#">Postavke</a>
+          <a href="#">Statistika</a>
+        </div>
+      </div>
+    </div>
+    <div class="bg inbox">
+      <div class="mailbox">
+        
+
+        <button class="collapsible"><i class="fa fa-fw fa-envelope" style="padding-right: 10px;"></i>MAILBOX</button>
+<div class="collapsible-content">
+  <button class="pacijenti-left">PACIJENTI</button>
+  <button class="pacijenti-left">LIJEČNICI</button>
+  <button class="pacijenti-left" style="border-bottom: 1px solid black;">FARMACEUTI</button>
+</div>
+        <button class="collapsible"><i class="fa fa-calendar" style="padding-right: 10px;"></i> RASPORED</button>
+<div class="collapsible-content">
+  
+</div>
+<button class="collapsible"><i class="fa fa-address-card-o" style="padding-right: 10px;"></i>PACIJENTI</button>
+<div class="collapsible-content">
+  
+</div>
+
+<button class="collapsible"><i class="fa fa-address-card-o" style="padding-right: 10px;"></i>OBAVIJESTI</button>
+<div class="collapsible-content">
+  <p style="text-align: center;">Nema novih obavijesti</p>
+</div>
+
+<div class="konzultacije">
+
+  <button class="collapsible"><i class="fa fa-fw fa-envelope" style="padding-right: 10px;"></i>DATOTEKE</button>
+<div class="collapsible-content">
+<p style="text-align: center;">Dodaj novo:</p>
+<form action="/action_page.php">
+<label for="myfile">Odaberi datoteku:</label>
+<input type="file" id="myfile" name="myfile" multiple><br><br>
+<input type="submit">
+</form>
+</div>
+  
+
+</div>
+
+      </div>
+      
+    </div>
+
+    
+
+    <div class="bg main">
+
+      
+      <button type="button" class="collapsible6">POVIJESTI BOLESTI</button>
+      <div class="content6">
+        <p>
+          <a target="_blank" href="images/pov1.jpg">
+            <img src="images/pov1.jpg" height="300px" width="200px">
+          </a>
+        </p>
+        <p></p>
+          <a target="_blank" href="images/pov2.jpg">
+            <img src="images/pov2.jpg" height="300px" width="200px">
+          </a>
+        </p>
+        
+      </div>
+
+      <script>
+        var coll = document.getElementsByClassName("collapsible6");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active6");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById('myImg');
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+  </script>
+
+    </div>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
+</body>
+
+</html>

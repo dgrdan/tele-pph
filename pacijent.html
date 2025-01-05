@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> PrimaPharme Telepharmacy</title>
+  <link rel="stylesheet" href="pacijent.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+  </script>
+  
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="bg logo">
+      <a href="enter.html"><img src="pphlogo.png"></a>
+    </div>
+    <div class="bg nav">
+      <div class="navbar">
+        <p>TELEFARMACIJA - PORTAL ZA PACIJENTE</p>
+      </div>
+    </div>
+    <div class="bg profil">
+      <img src="profil_icon.png">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Ivka Rodek</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Profil</a>
+          <a href="#">Postavke</a>
+          <a href="#">Statistika</a>
+        </div>
+      </div>
+    </div>
+    <div class="bg inbox">
+      <div class="mailbox">
+        
+
+        <button class="collapsible"><i class="fa fa-fw fa-envelope" style="padding-right: 10px;"></i>MAILBOX</button>
+<div class="collapsible-content">
+  <button class="pacijenti-left">NOVO</button>
+  <button class="pacijenti-left">POSLANO</button>
+  <button class="pacijenti-left" style="border-bottom: 1px solid black;">SVE</button>
+</div>
+        
+<button class="collapsible"><i class="fa fa-address-card-o" style="padding-right: 10px;"></i>UPUTE</button>
+<div class="collapsible-content">
+  
+</div>
+
+<button class="collapsible"><i class="fa fa-address-card-o" style="padding-right: 10px;"></i>OBAVIJESTI</button>
+<div class="collapsible-content">
+  <p style="text-align: center;">Nema novih obavijesti</p>
+</div>
+
+      </div>
+      <div class="konzultacije">
+
+        <button class="collapsible"><i class="fa fa-fw fa-envelope" style="padding-right: 10px;"></i>DATOTEKE</button>
+<div class="collapsible-content">
+  <p style="text-align: center;">Dodaj novo:</p>
+  <form action="/action_page.php">
+    <label for="myfile">Odaberi datoteku:</label>
+    <input type="file" id="myfile" name="myfile" multiple><br><br>
+    <input type="submit">
+  </form>
+</div>
+        
+
+      </div>
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
+
+    <div class="bg main">
+      <div class="main-container">
+        <div class="main-container-naslov">TELEFARMACIJA - KONZULTACIJA S FARMACEUTOM</div> 
+        <div class="main-container-content"><h4>Dobrodošli na portal za telefarmaciju ljekarni PrimaPharme !</h4>
+          <br><br> Molimo prije početka zakazanog termina pročitajte upute.
+          <br> Ovaj razgovor je sniman te će se snimka koristiti isključivo u svrhu izrade nalaza nakon konzultacije.
+          <br>
+          <a href="konzultacija-pac.html"><button class="zakonz">KONZULTACIJA</button></a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+
+  <div class="footer">
+    &#169;  Martina, Jasmina, Damjan
+  </div>
+</body>
+
+</html>
